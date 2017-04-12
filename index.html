@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JCalculator</title>
+    <script src="main.js"></script>
+    <style> 
+    
+        body{
+            background: antiquewhite;
+
+        }
+        .container{
+            margin: 10vw auto;
+            width: 50%;
+            background-color: #ccc;
+            padding: 5vh;
+            min-height: 30vh;
+             box-shadow: 10px 10px 5px #888888;
+            
+        }
+
+        .control-btn{
+
+            padding: 2vh;
+            width: 6.5vh;
+                font-size: 30px;
+                font-weight: bold;
+                 
+        }
+    
+        ul{
+            list-style: none;
+        }
+
+        li:hover{
+
+             box-shadow: 10px 10px 15px #888888;
+             cursor: pointer !important;
+        }
+
+        input{
+            padding: 10px;
+            text-align: center;
+            font-size: 13px;
+        }
+        li{
+            float: left;
+            margin: 2vw;
+        
+        }
+
+        .result{
+            font-size: 100px;
+            text-align: center;
+            border: solid 5px red;
+            color: red;
+            min-height: 15vh !important;
+            overflow: hidden;
+           
+        
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">   
+
+
+         <h1>JCalculator</h1>
+    
+    <input type="number" id="num1"/>
+ <input type="number" id="num2"/>
+
+        <ul>
+
+            <li> <button class="control-btn" onclick="add()" style="background:red; color:white; ">+</button>   </li>
+            <li><button  class="control-btn" onclick="substract()" style="background:green; color:white; ">-</button></li>
+            <li><button  class="control-btn"  onclick="multiply()" style="background:blue; color:white; ">X</button></li>
+            <li><button  class="control-btn"  onclick="divide()" style="background:yellow; color:white; ">/</button></li>
+
+        </ul>
+        
+
+      
+          
+           
+
+    </div>
+
+
+      <div class="result container">
+
+
+            
+        </div>
+         
+   
+
+</body>
+</html>
