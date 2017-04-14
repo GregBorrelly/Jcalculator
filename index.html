@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JCalculator</title>
-    <script src="main.js"></script>
+   
     <style> 
     
         body{
@@ -17,7 +17,7 @@
             width: 50%;
             background-color: #ccc;
             padding: 5vh;
-            min-height: 30vh;
+            min-height: 60vh;
              box-shadow: 10px 10px 5px #888888;
             
         }
@@ -37,18 +37,45 @@
 
         li:hover{
 
-             box-shadow: 10px 10px 15px #888888;
+           
              cursor: pointer !important;
         }
 
         input{
             padding: 10px;
-            text-align: center;
+            text-align: right;
             font-size: 13px;
+            width: 450px;
+            background: #b1f2b0;
+            font-size: 20px;
         }
-        li{
+
+        #operators li{
+            float: right;
+            margin: 15px;
+            
+
+        }
+
+        #numbers {
+
             float: left;
-            margin: 2vw;
+            width: 50%;
+        }
+       #numbers li{
+           float: left; 
+            margin: 1vw;
+            padding: 10px;
+           
+            
+        
+        }
+
+        #numbers li button{
+           float: left; 
+           padding: 5px;
+           font-size: 30px;
+            
         
         }
 
@@ -59,8 +86,13 @@
             color: red;
             min-height: 15vh !important;
             overflow: hidden;
+            background: white !important;
            
         
+        }
+
+        li{
+            list-style: none !important;
         }
     
     </style>
@@ -71,33 +103,55 @@
 
          <h1>JCalculator</h1>
     
-    <input type="number" id="num1"/>
- <input type="number" id="num2"/>
+    <input  id="num1"/>
+ 
+    <hr>
+    <div id="numbersP" >
 
-        <ul>
 
-            <li> <button class="control-btn" onclick="add()" style="background:red; color:white; ">+</button>   </li>
-            <li><button  class="control-btn" onclick="substract()" style="background:green; color:white; ">-</button></li>
-            <li><button  class="control-btn"  onclick="multiply()" style="background:blue; color:white; ">X</button></li>
-            <li><button  class="control-btn"  onclick="divide()" style="background:yellow; color:white; ">/</button></li>
+        <ul id="numbers">
+
+            <li><button class="btn" value="1">1</button></li>
+            
+            <li><button class="btn" value="2">2</button></li>
+            <li><button class="btn" value="3">3</button></li>
+            <li><button class="btn"  value="4">4</button></li>
+            <li><button  class="btn" value="5">5</button></li>
+            <li><button class="btn" value="6">6</button></li>
+            <li><button class="btn" value="7">7</button></li>
+            <li><button class="btn" value="8">8</button></li>
+            <li><button class="btn" value="9">9</button></li>
+            <li><button class="btn" value="0">0</button></li>
+        </ul>
+
+        <ul id="operators">
+
+            <li> <button class="control-btn btn" value='+' style="background:red; color:white; ">+</button>   </li>
+            <li><button  class="control-btn btn"  value='-' style="background:green; color:white; ">-</button></li>
+            <li><button  class="control-btn btn"  value='*' style="background:blue; color:white; ">X</button></li>
+            <li><button  class="control-btn btn"  value='/' style="background:yellow; color:white; ">/</button></li>
+            
 
         </ul>
+
+       
+    </div>
+    <button  class="control-btn btn" onclick="getNumString()" style="background:darkslategray; color:white; ">=</button>
+    <button class="control-btn" onclick="clearEverything()" style="background:darkslategray; color:white; ">C</button>
+
         
 
-      
+      <hr>
           
            
 
     </div>
 
 
-      <div class="result container">
-
-
-            
-        </div>
-         
+    
    
 
 </body>
+
+ <script src="main.js"></script>
 </html>
